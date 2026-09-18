@@ -1,0 +1,80 @@
+body[data-tema="plava"] {
+    --auth-bg: #eef4fb;
+    --auth-accent: #2d5a87;
+    --auth-accent-hover: #1a3a5c;
+    --auth-card: #ffffff;
+}
+
+body[data-tema="zelena"] {
+    --auth-bg: #eef8f0;
+    --auth-accent: #2e7d4f;
+    --auth-accent-hover: #1f5737;
+    --auth-card: #ffffff;
+}
+
+body[data-tema="roza"] {
+    --auth-bg: #fdf0f4;
+    --auth-accent: #b84a6f;
+    --auth-accent-hover: #8c3454;
+    --auth-card: #ffffff;
+}
+
+body.page-body {
+    background: var(--auth-bg, #eef4fb);
+}
+
+.auth-wrap {
+    max-width: 420px;
+    background: var(--auth-card, #fff);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.auth-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.auth-form input,
+.auth-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.auth-form button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    background: var(--auth-accent, #2d5a87);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.auth-form button:hover {
+    background: var(--auth-accent-hover, #1a3a5c);
+}
+
+.auth-link {
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: var(--auth-accent, #2d5a87);
+}
+
+.auth-poruka {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #444;
+}
