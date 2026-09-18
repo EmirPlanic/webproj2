@@ -35,8 +35,11 @@ function postaviSesiju(korisnik) {
     }
 }
 
-function otvoriAngularApp() {
-    window.open("http://localhost:4200", "_blank");
+function otvoriAngularApp(korisnik) {
+    var url = "http://localhost:4200/?ime=" + encodeURIComponent(korisnik.ime) +
+        "&email=" + encodeURIComponent(korisnik.email) +
+        "&tema=" + encodeURIComponent(korisnik.tema);
+    window.open(url, "_blank");
 }
 
 var registerForm = document.getElementById("registerForm");
@@ -68,7 +71,7 @@ if (registerForm) {
 
         postaviSesiju(novi);
         poruka.textContent = "Registracija uspjesna. Otvaram Angular aplikaciju...";
-        setTimeout(otvoriAngularApp, 600);
+        setTimeout(function () { otvoriAngularApp(novi); }, 600);
     });
 
     var goLogin = document.getElementById("goLogin");
@@ -98,7 +101,7 @@ if (loginForm) {
 
         postaviSesiju(korisnik);
         poruka.textContent = "Prijava uspjesna. Otvaram Angular aplikaciju...";
-        setTimeout(otvoriAngularApp, 600);
+        setTimeout(function () { otvoriAngularApp(korisnik); }, 600);
     });
 
     var goRegister = document.getElementById("goRegister");

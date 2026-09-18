@@ -1,0 +1,24 @@
+<div class="app-shell">
+  <header class="top-bar">
+    <div class="brand">Personal Life Dashboard</div>
+    <nav class="main-nav">
+      <a routerLink="/profil" routerLinkActive="active">View Profile</a>
+      <a routerLink="/fun-zone" routerLinkActive="active">Student Fun Zone</a>
+      <a routerLink="/trackeri" routerLinkActive="active">My Trackers</a>
+    </nav>
+    @if (ime) {
+      <div class="user-info">Prijavljen: {{ ime }}</div>
+    }
+  </header>
+
+  <main class="content">
+    @if (ime) {
+      <router-outlet></router-outlet>
+    } @else {
+      <section class="no-login">
+        <h2>Nisi prijavljen</h2>
+        <p>Prvo se registruj ili prijavi na IPI Akademija stranici, pa otvori Angular aplikaciju.</p>
+      </section>
+    }
+  </main>
+</div>
