@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(180deg, #eef1f5, #d4c4a8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 15px;
+    color: #1a3a5c;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+button {
+    background: #2d5a87;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1a3a5c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    width: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #1a3a5c;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    margin: 0 6px;
+}
+
+#board {
+    position: relative;
+    width: 90%;
+    flex-grow: 1;
+    background: url('slike/pluto.png');
+    background-size: cover;
+    border-radius: 12px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.note, .quote, .pinned-img {
+    position: absolute;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: move;
+    user-select: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease;
+}
+
+.note.color1 { background: #fdfd96; }
+.note.color2 { background: #ffb6b9; }
+.note.color3 { background: #c6f1e7; }
+.note.color4 { background: #f6d6ad; }
+.note.color5 { background: #d4a5a5; }
+.note.color6 { background: #b5ead7; }
+
+.note[contenteditable="true"] {
+    outline: none;
+    min-width: 100px;
+    min-height: 60px;
+    font-size: 14px;
+}
+
+.quote {
+    font-family: "Georgia", serif;
+    color: #4b382a;
+    background: #fff5e6;
+    font-style: italic;
+    text-align: center;
+    width: 200px;
+}
+
+.pinned-img img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.pinned-img {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    font-size: 13px;
+    color: #5b4636;
+    margin: 10px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    background: none;
+    border: none;
+    color: #b30000;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.note:hover .delete-btn,
+.pinned-img:hover .delete-btn,
+.quote:hover .delete-btn {
+    opacity: 1;
+}
+
+.pinned-img .delete-btn:hover,
+.note .delete-btn:hover,
+.quote .delete-btn:hover {
+    color: #ff0000;
+    transform: scale(1.15);
+    background: transparent !important;
+}
+
+.note a, .quote a {
+    background: transparent !important;
+    outline: none;
+}
+
+.quote:focus,
+.quote .delete-btn:focus,
+.note .delete-btn:focus {
+    outline: none;
+}

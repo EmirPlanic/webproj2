@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kviz</title>
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="page-body">
+    <div class="page-wrap">
+        <h1>Kviz - Web programiranje</h1>
+        <p class="intro">Odgovori na pitanja i provjeri svoje znanje.</p>
+
+        <form id="kvizForm" class="kviz-form">
+            <div class="kviz-pitanje">
+                <p><strong>1.</strong> Sta znaci skracenica HTML?</p>
+                <label><input type="radio" name="p1" value="a"> HyperText Markup Language</label>
+                <label><input type="radio" name="p1" value="b"> High Tech Modern Language</label>
+                <label><input type="radio" name="p1" value="c"> Home Tool Markup Language</label>
+            </div>
+
+            <div class="kviz-pitanje">
+                <p><strong>2.</strong> Koji tag se koristi za link?</p>
+                <label><input type="radio" name="p2" value="a"> &lt;link&gt;</label>
+                <label><input type="radio" name="p2" value="b"> &lt;a&gt;</label>
+                <label><input type="radio" name="p2" value="c"> &lt;href&gt;</label>
+            </div>
+
+            <div class="kviz-pitanje">
+                <p><strong>3.</strong> Gdje se pise JavaScript logika u ovom projektu?</p>
+                <label><input type="radio" name="p3" value="a"> U .css fajlu</label>
+                <label><input type="radio" name="p3" value="b"> U .js fajlu</label>
+                <label><input type="radio" name="p3" value="c"> U .png fajlu</label>
+            </div>
+
+            <button type="submit">Provjeri odgovore</button>
+        </form>
+
+        <p id="kvizRezultat" class="kviz-rezultat"></p>
+    </div>
+
+    <script src="../js/kviz.js"></script>
+</body>
+</html>

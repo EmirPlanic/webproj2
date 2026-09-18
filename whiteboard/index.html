@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktivni Whiteboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Interaktivni Whiteboard</h1>
+
+    <div class="toolbar">
+        <label for="boja">Boja:</label>
+        <input type="color" id="boja" value="#000000">
+
+        <label for="debljina">Debljina:</label>
+        <input type="range" id="debljina" min="1" max="30" value="3">
+
+        <button id="btnCrtaj" type="button">Crtaj</button>
+        <button id="btnBrisi" type="button">Brisi</button>
+        <button id="btnOcisti" type="button">Ocisti</button>
+        <button id="btnPng" type="button">Spremi PNG</button>
+        <button id="btnPdf" type="button">Snimi kao PDF</button>
+        <button id="btnMail" type="button">Posalji mailom</button>
+    </div>
+
+    <canvas id="ploca" width="900" height="500"></canvas>
+
+    <div id="mailModal" class="modal">
+        <div class="modal-content">
+            <h3>Posalji mailom</h3>
+            <input type="email" id="mailInput" placeholder="Unesite email adresu">
+            <div class="modal-buttons">
+                <button id="mailSend" type="button">Posalji</button>
+                <button id="mailCancel" type="button">Ponisti</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>IPI Akademija - Interaktivni Whiteboard</footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+body.page-body {
+    margin: 0;
+    padding: 24px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-wrap h1 {
+    color: #1a3a5c;
+    margin-bottom: 16px;
+}
+
+.intro {
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #f4f7fb;
+    border-left: 4px solid #2d5a87;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #1a3a5c;
+    margin-bottom: 8px;
+}
+
+.contact-form {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #1a3a5c;
+    margin-top: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccd6e0;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    margin-top: 12px;
+    padding: 12px 20px;
+    background: #2d5a87;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-form button:hover {
+    background: #1a3a5c;
+}
+
+.fun-box {
+    text-align: center;
+    background: #f4f7fb;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+}
+
+.bingo-display {
+    font-size: 64px;
+    font-weight: bold;
+    color: #1a3a5c;
+    margin-bottom: 20px;
+}
+
+.fun-box button {
+    padding: 10px 22px;
+    background: #2d5a87;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.fun-box button:hover {
+    background: #1a3a5c;
+}
+
+.btn-secondary {
+    background: #7f8c8d !important;
+}
+
+.fun-info {
+    margin: 16px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.kviz-form {
+    max-width: 560px;
+}
+
+.kviz-pitanje {
+    background: #f4f7fb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.kviz-pitanje label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.kviz-form button {
+    padding: 12px 20px;
+    background: #2d5a87;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.kviz-form button:hover {
+    background: #1a3a5c;
+}
+
+.kviz-rezultat {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a3a5c;
+}
