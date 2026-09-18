@@ -6,6 +6,7 @@ import { TrackerPageComponent } from './pages/tracker-page/tracker-page.componen
 import { FunBingoComponent } from './pages/fun-bingo/fun-bingo.component';
 import { FunKvizComponent } from './pages/fun-kviz/fun-kviz.component';
 import { FunAlatComponent } from './pages/fun-alat/fun-alat.component';
+import { StatistikaComponent } from './pages/statistika/statistika.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'profil', pathMatch: 'full' },
@@ -16,5 +17,6 @@ export const routes: Routes = [
   { path: 'fun-zone/alat/:alat', component: FunAlatComponent },
   { path: 'trackeri', component: TrackeriComponent },
   { path: 'trackeri/:id', component: TrackerPageComponent },
+  { path: 'statistika', component: StatistikaComponent },
   { path: '**', redirectTo: 'profil' }
 ];

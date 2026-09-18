@@ -41,4 +41,36 @@ export class TrackerDataService {
   sacuvajUnose(modulId: string, unosi: TrackerUnos[]): void {
     localStorage.setItem('tracker_' + this.getEmail() + '_' + modulId, JSON.stringify(unosi));
   }
+
+  /** Unosi ciji je datum u intervalu [od, do] (YYYY-MM-DD). */
+  getUnosiZaPeriod(modulId: string, od: string, doDatum: string): TrackerUnos[] {
+    const svi = this.getUnosi(modulId);
+    const lista: TrackerUnos[] = [];
+    for (let i = 0; i < svi.length; i++) {
+      const d = svi[i].datum;
+      if (d >= od && d <= doDatum) {
+        lista.push(svi[i]);
+      }
+    }
+    return lista;
+  }
+
+  /** Suma numerickih vrijednosti za modul u periodu. */
+  sumaZaPeriod(modulId: string, od: string, doDatum: string): number {
+    const unosi = this.getUnosiZaPeriod(modulId, od, doDatum);
+    let ukupno = 0;
+    for (let j = 0; j < unosi.length; j++) {
+      ukupno += Number(unosi[j].vrijednost) || 0;
+    }
+    return ukupno;
+  }
+
+  /** Prosjek numerickih vrijednosti; 0 ako nema unosa. */
+  prosjekZaPeriod(modulId: string, od: string, doDatum: string): number {
+    const unosi = this.getUnosiZaPeriod(modulId, od, doDatum);
+    if (unosi.length === 0) {
+      return 0;
+    }
+    return this.sumaZaPeriod(modulId, od, doDatum) / unosi.length;
+  }
 }

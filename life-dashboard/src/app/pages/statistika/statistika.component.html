@@ -1,0 +1,40 @@
+<section class="page-box statistika-page">
+  <h1>Statistika</h1>
+  <p>Grafovi se grade iz tvojih unosa u My Trackers (localStorage).</p>
+
+  <div class="filter-red">
+    <label for="sedmica">Sedmica</label>
+    <select id="sedmica" [(ngModel)]="sedmicaOffset" (ngModelChange)="promjenaSedmice()">
+      <option [ngValue]="0">Ova sedmica</option>
+      <option [ngValue]="1">Prošla sedmica</option>
+      <option [ngValue]="2">Prije 2 sedmice</option>
+    </select>
+    <span class="period">{{ periodOd }} — {{ periodDo }}</span>
+    <button type="button" class="pdf-btn" (click)="exportPdf()">Preuzmi PDF izvještaj</button>
+  </div>
+
+  <div class="savjeti">
+    <h2>Kratki savjeti</h2>
+    <ul>
+      @for (s of savjeti; track s) {
+        <li>{{ s }}</li>
+      }
+    </ul>
+  </div>
+
+  <div class="graf-grid">
+    <div class="graf-box">
+      <h3>Sleep Tracker — bar graf</h3>
+      <canvas #chartSleep></canvas>
+    </div>
+    <div class="graf-box">
+      <h3>Study Tracker — line graf</h3>
+      <canvas #chartStudy></canvas>
+    </div>
+    <div class="graf-box">
+      <h3>Udio aktivnosti — pie graf</h3>
+      <p class="pie-note">Voda, obroci i navike u odabranoj sedmici.</p>
+      <canvas #chartPie></canvas>
+    </div>
+  </div>
+</section>
