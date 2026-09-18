@@ -8,6 +8,15 @@ Personal Life Dashboard je nastavak Projekta 1. IPI stranica ostaje u HTML/CSS/J
 
 Treba ti Node.js (npr. 20+), npm, Firefox ili Chrome.
 
+### Brzi start (sve odjednom)
+
+```bash
+cd ~/Desktop/webproj2
+./pokreni.sh
+```
+
+Skripta pokrene Angular na portu 4200, sačeka da server odgovori, pa otvori IPI `index.html` u Firefoxu. Login/Register i dalje otvara dashboard u novom tabu.
+
 ### 1. IPI Akademija (statika)
 
 ```bash

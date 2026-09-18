@@ -27,6 +27,30 @@ body[data-tema='roza'] {
   --accent: #b84a6f;
 }
 
+body[data-tema='narandzasta'] {
+  --page-bg: #fff6ee;
+  --header-bg: #d97706;
+  --card-bg: #ffffff;
+  --text-color: #222;
+  --accent: #d97706;
+}
+
+body[data-tema='dark'] {
+  --page-bg: #121212;
+  --header-bg: #2d2d2d;
+  --card-bg: #1e1e1e;
+  --text-color: #e8e8e8;
+  --accent: #5b9bd5;
+}
+
+body[data-tema='cyberpunk'] {
+  --page-bg: #0d0221;
+  --header-bg: #240046;
+  --card-bg: #1a0a2e;
+  --text-color: #f5efff;
+  --accent: #ff006e;
+}
+
 .page-box {
   background: var(--card-bg);
   padding: 20px;

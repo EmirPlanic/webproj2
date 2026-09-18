@@ -19,6 +19,37 @@ body[data-tema="roza"] {
     --auth-card: #ffffff;
 }
 
+body[data-tema="narandzasta"] {
+    --auth-bg: #fff6ee;
+    --auth-accent: #d97706;
+    --auth-accent-hover: #b45309;
+    --auth-card: #ffffff;
+}
+
+body[data-tema="dark"] {
+    --auth-bg: #1a1a1a;
+    --auth-accent: #5b9bd5;
+    --auth-accent-hover: #3d7ab8;
+    --auth-card: #2a2a2a;
+    color: #eee;
+}
+
+body[data-tema="dark"] .auth-form label {
+    color: #ddd;
+}
+
+body[data-tema="cyberpunk"] {
+    --auth-bg: #0d0221;
+    --auth-accent: #ff006e;
+    --auth-accent-hover: #c4005a;
+    --auth-card: #1a0a2e;
+    color: #f0e6ff;
+}
+
+body[data-tema="cyberpunk"] .auth-form label {
+    color: #e0d4ff;
+}
+
 body.page-body {
     background: var(--auth-bg, #eef4fb);
 }
