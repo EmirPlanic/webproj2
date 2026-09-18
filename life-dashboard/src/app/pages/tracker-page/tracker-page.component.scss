@@ -1,0 +1,57 @@
+.forma label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.forma input {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.dugmad {
+  margin-top: 16px;
+}
+
+.dugmad button,
+.mali {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.pregled {
+  margin-top: 24px;
+  padding: 12px;
+  background: #f4f7fb;
+  border-radius: 8px;
+}
+
+.historija {
+  margin-top: 24px;
+}
+
+.red-unosa {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nap {
+  display: block;
+  font-size: 13px;
+  color: #666;
+}
+
+.mali {
+  font-size: 12px;
+  padding: 4px 10px;
+  margin-top: 6px;
+}

@@ -1,0 +1,53 @@
+@if (modul) {
+  <section class="page-box">
+    <p><a routerLink="/trackeri">← Nazad na My Trackers</a></p>
+    <h1>{{ modul.naziv }}</h1>
+    <p>{{ modul.opis }}</p>
+
+    <div class="forma">
+      <label>Datum</label>
+      <input type="date" [(ngModel)]="datum" [readOnly]="zakljucano">
+
+      <label>Vrijednost ({{ modul.jedinica }})</label>
+      <input type="text" [(ngModel)]="vrijednost" [readOnly]="zakljucano" placeholder="npr. 8">
+
+      <label>Napomena</label>
+      <input type="text" [(ngModel)]="napomena" [readOnly]="zakljucano" placeholder="opcionalno">
+
+      <div class="dugmad">
+        @if (!zakljucano) {
+          <button type="button" (click)="spremi()">Spremi</button>
+        } @else {
+          <button type="button" (click)="uredi()">Uredi</button>
+        }
+      </div>
+    </div>
+
+    <div class="pregled">
+      <h2>Statistika</h2>
+      <p>{{ statistika() }}</p>
+    </div>
+
+    <div class="historija">
+      <h2>Prethodni unosi</h2>
+      @if (unosi.length === 0) {
+        <p>Jos nema sacuvanih unosa.</p>
+      }
+      @for (u of unosi; track i; let i = $index) {
+        <div class="red-unosa">
+          <span>{{ u.datum }} — {{ u.vrijednost }} {{ modul.jedinica }}</span>
+          @if (u.napomena) {
+            <span class="nap">{{ u.napomena }}</span>
+          }
+          <button type="button" class="mali" (click)="urediUnos(i)">Uredi</button>
+          <button type="button" class="mali" (click)="obrisi(i)">Obrisi</button>
+        </div>
+      }
+    </div>
+  </section>
+} @else {
+  <section class="page-box">
+    <p>Tracker nije pronadjen.</p>
+    <a routerLink="/trackeri">Nazad</a>
+  </section>
+}

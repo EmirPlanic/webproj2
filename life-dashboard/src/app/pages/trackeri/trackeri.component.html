@@ -1,6 +1,28 @@
 <section class="page-box">
   <h1>My Trackers</h1>
-  <p>Life Management System — glavni meni trackera.</p>
-  <p>Ovdje idu kartice: Water, Habit, Sleep, Study, Meal, Mood i ostali moduli.</p>
-  <p>Dodajemo u commitu 3.</p>
+  <p>Life Management System — izaberi koje trackere zelis na svom dashboardu.</p>
+
+  <div class="modul-lista">
+    @for (m of moduli; track m.id) {
+      <div class="modul-red">
+        <label>
+          <input type="checkbox" [checked]="ukljucen(m.id)" (change)="promjena(m.id, $event)">
+          {{ m.naziv }}
+        </label>
+        <span class="opis">{{ m.opis }}</span>
+      </div>
+    }
+  </div>
+
+  <h2>Aktivni trackeri</h2>
+  <div class="kartice">
+    @for (m of moduli; track m.id) {
+      @if (prikaziNaDashboard(m.id)) {
+        <a class="kartica" [routerLink]="['/trackeri', m.id]">
+          <h3>{{ m.naziv }}</h3>
+          <p>{{ m.opis }}</p>
+        </a>
+      }
+    }
+  </div>
 </section>
