@@ -1,0 +1,27 @@
+<section class="page-box">
+  <p><a routerLink="/fun-zone">← Nazad na Fun Zone</a></p>
+  <h1>Kviz</h1>
+
+  <div class="pitanje">
+    <p><strong>1.</strong> Sta znaci skracenica HTML?</p>
+    <label><input type="radio" name="p1" value="a" [(ngModel)]="p1"> HyperText Markup Language</label>
+    <label><input type="radio" name="p1" value="b" [(ngModel)]="p1"> High Tech Modern Language</label>
+  </div>
+
+  <div class="pitanje">
+    <p><strong>2.</strong> Koji tag je za link?</p>
+    <label><input type="radio" name="p2" value="a" [(ngModel)]="p2"> link</label>
+    <label><input type="radio" name="p2" value="b" [(ngModel)]="p2"> a</label>
+  </div>
+
+  <div class="pitanje">
+    <p><strong>3.</strong> Gdje ide JavaScript logika?</p>
+    <label><input type="radio" name="p3" value="a" [(ngModel)]="p3"> u css</label>
+    <label><input type="radio" name="p3" value="b" [(ngModel)]="p3"> u js fajl</label>
+  </div>
+
+  <button type="button" (click)="provjeri()">Provjeri odgovore</button>
+  @if (rezultat) {
+    <p class="rez">{{ rezultat }}</p>
+  }
+</section>

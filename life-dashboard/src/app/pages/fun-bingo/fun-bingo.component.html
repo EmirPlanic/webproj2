@@ -1,0 +1,8 @@
+<section class="page-box">
+  <p><a routerLink="/fun-zone">← Nazad na Fun Zone</a></p>
+  <h1>Bingo</h1>
+  <div class="bingo-broj">{{ prikaz }}</div>
+  <button type="button" (click)="izvuci()">Izvuci broj</button>
+  <button type="button" class="sec" (click)="reset()">Resetuj igru</button>
+  <p>{{ info }}</p>
+</section>

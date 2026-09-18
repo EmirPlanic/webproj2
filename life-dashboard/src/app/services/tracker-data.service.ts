@@ -21,7 +21,7 @@ export class TrackerDataService {
   getAktivniModuli(): string[] {
     const raw = localStorage.getItem('trackerAktivni_' + this.getEmail());
     if (!raw) {
-      return ['water', 'habit', 'sleep', 'study'];
+      return ['water', 'habit', 'sleep', 'study', 'meal', 'mood'];
     }
     return JSON.parse(raw) as string[];
   }

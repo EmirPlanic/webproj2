@@ -1,0 +1,10 @@
+<section class="page-box alat-wrap">
+  <p><a routerLink="/fun-zone">← Nazad na Fun Zone</a></p>
+  <h1>{{ naslov }}</h1>
+
+  @if (url) {
+    <iframe [src]="url" title="{{ naslov }}" class="alat-frame"></iframe>
+  } @else {
+    <p>Alat nije pronadjen.</p>
+  }
+</section>

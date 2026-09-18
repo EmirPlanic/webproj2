@@ -1,0 +1,25 @@
+.pitanje {
+  background: #f4f7fb;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.pitanje label {
+  display: block;
+  margin: 6px 0;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rez {
+  margin-top: 14px;
+  font-weight: bold;
+}

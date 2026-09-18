@@ -10,6 +10,6 @@ export const SVI_MODULI: TrackerModul[] = [
   { id: 'habit', naziv: 'Habit Tracker', opis: 'Dnevne navike', jedinica: 'navika' },
   { id: 'sleep', naziv: 'Sleep Tracker', opis: 'Sati sna', jedinica: 'sati' },
   { id: 'study', naziv: 'Study Tracker', opis: 'Sati ucenja', jedinica: 'sati' },
-  { id: 'meal', naziv: 'Meal Tracker', opis: 'Obroci (uskoro)', jedinica: 'obrok' },
-  { id: 'mood', naziv: 'Mood Tracker', opis: 'Raspolozenje (uskoro)', jedinica: 'ocjena' }
+  { id: 'meal', naziv: 'Meal Tracker', opis: 'Broj obroka dnevno', jedinica: 'obrok' },
+  { id: 'mood', naziv: 'Mood Tracker', opis: 'Raspolozenje 1-10', jedinica: 'ocjena' }
 ];

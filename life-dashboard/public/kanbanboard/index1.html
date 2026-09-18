@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban ploca</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Kanban ploca</h1>
+
+    <div class="buttons">
+        <button id="addTaskBtn" type="button">Dodaj zadatak</button>
+        <button id="saveBoardBtn" type="button">Snimi PNG</button>
+        <button id="savePdfBtn" type="button">Snimi kao PDF</button>
+        <button id="sendMailBtn" type="button">Posalji mailom</button>
+        <button id="clearBoardBtn" type="button">Ocisti plocu</button>
+    </div>
+
+    <div class="board">
+        <div class="column" data-status="todo">
+            <h2>To Do</h2>
+            <div class="taskList"></div>
+        </div>
+        <div class="column" data-status="inprogress">
+            <h2>In Progress</h2>
+            <div class="taskList"></div>
+        </div>
+        <div class="column" data-status="done">
+            <h2>Done</h2>
+            <div class="taskList"></div>
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h3>Novi zadatak</h3>
+            <input type="text" id="taskInput" placeholder="Unesite zadatak...">
+            <div class="modal-buttons">
+                <button id="modalAdd" type="button">Dodaj</button>
+                <button id="modalCancel" type="button">Odustani</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="clearModal" class="modal">
+        <div class="modal-content">
+            <h3>Ocisti plocu?</h3>
+            <p>Da li ste sigurni da zelite obrisati sve zadatke?</p>
+            <div class="modal-buttons">
+                <button id="clearYes" type="button">Da - Ocisti plocu</button>
+                <button id="clearNo" type="button">Ne - Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mailModal" class="modal">
+        <div class="modal-content">
+            <h3>Posalji mailom</h3>
+            <input type="email" id="mailInput" placeholder="Unesite email adresu">
+            <div class="modal-buttons">
+                <button id="mailSend" type="button">Posalji</button>
+                <button id="mailCancel" type="button">Ponisti</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript1.js"></script>
+</body>
+</html>

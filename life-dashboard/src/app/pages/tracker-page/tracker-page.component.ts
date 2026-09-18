@@ -102,6 +102,21 @@ export class TrackerPageComponent implements OnInit {
       const prosjek = (ukupno / this.unosi.length).toFixed(1);
       return 'Prosjek sati: ' + prosjek;
     }
+    if (this.modul?.id === 'meal') {
+      let ukupno = 0;
+      for (let k = 0; k < this.unosi.length; k++) {
+        ukupno += Number(this.unosi[k].vrijednost) || 0;
+      }
+      return 'Ukupno obroka (svi unosi): ' + ukupno;
+    }
+    if (this.modul?.id === 'mood') {
+      let ukupno = 0;
+      for (let m = 0; m < this.unosi.length; m++) {
+        ukupno += Number(this.unosi[m].vrijednost) || 0;
+      }
+      const prosjek = (ukupno / this.unosi.length).toFixed(1);
+      return 'Prosjek raspolozenja (1-10): ' + prosjek;
+    }
     return 'Broj unosa: ' + this.unosi.length;
   }
 }

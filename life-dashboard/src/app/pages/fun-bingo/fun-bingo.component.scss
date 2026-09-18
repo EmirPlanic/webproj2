@@ -1,0 +1,20 @@
+.bingo-broj {
+  font-size: 56px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--accent);
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+button.sec {
+  background: #777;
+}

@@ -1,0 +1,25 @@
+.kartice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.kartica {
+  display: block;
+  background: #f7f9fc;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.kartica h3 {
+  margin: 0 0 8px;
+  color: var(--accent);
+}
+
+.kartica:hover {
+  background: #eef3fa;
+}
